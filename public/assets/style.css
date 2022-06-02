@@ -60,3 +60,7 @@ a {
 .card-title {
     margin: 10px 0px 30px 0px;
 }
+
+.card-description {
+    margin-top: 10px;
+}
