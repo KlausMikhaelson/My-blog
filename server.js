@@ -11,9 +11,25 @@ app.use('/articles', articleRouter);
 app.get('/', (req, res) => {
     const articles = [{
         title: 'Test Article',
-        creatAt: Date.now(),
+        createdAt: new Date(),
         description: 'Test Description'
-    }]
+    },
+    {
+        title: 'Test Article2',
+        createdAt: new Date(),
+        description: 'Test Description2'
+    },
+    {
+        title: 'Test Article3',
+        createdAt: new Date(),
+        description: 'Test Description3'
+    },
+    {
+        title: 'Test Article4',
+        createdAt: new Date(),
+        description: 'Test Description4'
+    }
+]
     res.render('index', {articles: articles});
 })
 

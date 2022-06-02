@@ -11,9 +11,28 @@
 </head>
 
 <body>
-    <h1>
-        <%= articles %>
-    </h1>
+    <div class="Container">
+        <div class="upper-part">
+            <h1>My Personal Blogs</h1>
+        </div>
+        <div class="new-Article">
+            <button><a href="/articles/new">New Article</a></button>
+        </div>
+        <% articles.forEach(article=> { %>
+            <div class="card">
+                <div class="card-body">
+                    <div class="card-title">
+                        <h4>
+                            <%= article.title %>
+                        </h4>
+                    </div>
+                    <div class="card-Date">
+                        <%= article.createdAt.toLocaleDateString() %>
+                    </div>
+                </div>
+            </div>
+            <% }) %>
+    </div>
 </body>
 
 </html>
