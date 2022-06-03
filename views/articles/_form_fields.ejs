@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="input-fill">
+        <div class="input-fill-title">
+            <label for="title">Title</label><br>
+            <input required type="text" value="<%= article.title %> " name="title" id="title" class="form-title">
+            <br>
+            <label for="description">Description</label>
+            <br>
+            <textarea required name="description" id="description" cols="30" rows="10"
+                style="height: 80px;"><%= article.description%> </textarea>
+            <br>
+            <label for="description">Markdown</label>
+            <br>
+            <textarea required name="Markdown" id="Markdown" cols="30" rows="10"
+                style="height: 80px;"><%= article.markdown %> </textarea>
+        </div>
+        <div class="button-newArticle">
+            <button class="cancel" style="border-radius: 5px; background-color: Gray;  padding: 10px; margin: 10px"><a
+                    href="/" style="color: white;">Cancel</a></button>
+            <button type="submit" class="save"
+                style="border-radius: 5px; background-color: rgb(6, 6, 247) Hues; color: white; padding: 10px; margin: 10px;">Save</button>
+
+        </div>
+        <!-- Save button -->
+</body>
+
+</html>

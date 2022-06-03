@@ -4,9 +4,12 @@ const articleRouter = require('./routes/articles.js')
 const app = express();
 app.set('view engine', 'ejs')
 app.use('/public/assets', express.static('public/assets'));
-app.use('/articles', articleRouter);
 
+mongoose.connect('mongodb://127.0.0.1/urlShortener', {
+  useNewUrlParser: true, useUnifiedTopology: true
+})
 
+app.use(express.urlencoded({extended: false}))
 
 app.get('/', (req, res) => {
     const articles = [{
@@ -32,5 +35,8 @@ app.get('/', (req, res) => {
 ]
     res.render('articles/index', {articles: articles});
 })
+
+app.use('/articles', articleRouter);
+
 
 app.listen(5000);

@@ -2,6 +2,10 @@
     margin: 0px;
     padding:0px;
 }
+h1 {
+    color:  #0047ab;
+    font-size: 3rem;
+}
 
 .Container {
     max-width: 518vh;
@@ -38,7 +42,7 @@ button:hover {
 }
 a {
     text-decoration: none;
-    background-color: #16e0bd;
+    /* background-color: #16e0bd; */
     color: black;
     font-size: 20px;
     padding: 15px;
@@ -63,4 +67,39 @@ a {
 
 .card-description {
     margin-top: 10px;
+}
+
+/* new page */
+input[type=text], textarea {
+    -webkit-transition: all 0.30s ease-in-out;
+    -moz-transition: all 0.30s ease-in-out;
+    -ms-transition: all 0.30s ease-in-out;
+    -o-transition: all 0.30s ease-in-out;
+    outline: none;
+    /* padding: 3px 0px 3px 3px; */
+    margin: 5px 1px 25px 0px;
+    border: 1px solid #DDDDDD;
+    height: 25px;
+    width: 70%;
+    border-radius: 10px;
+  }
+   
+  input[type=text]:focus, textarea:focus {
+    box-shadow: 0 0 5px rgba(81, 203, 238, 1);
+    padding: 3px 0px 3px 3px;
+    margin: 5px 1px 3px 0px;
+    border: 1px solid rgba(81, 203, 238, 1);
+  }
+.new-Article-page {
+
+}
+
+label {
+    font-size: 1.7rem;
+    padding: 10px;
+}
+
+.input-fill {
+    margin-top: 2%;
+    margin-left: 10%;
 }
