@@ -18,6 +18,8 @@
     <div class="show-description">
         <%= article.createdAt.toLocaleDateString() %>
     </div>
+    <a href="/articles/edit/<%= article.id %> " class=""
+        style="border-radius: 5px; background-color: Gray;  padding: 10px; margin: 10px">All Articles</a>
     <div class="show-markdown">
         <%= article.markdown %>
     </div>

@@ -3,7 +3,11 @@ const Article = require('./../models/article')
 const router = express.Router()
 
 router.get('/new', (req, res) => {
+    try{
   res.render('articles/new', { article: new Article() })
+} catch(e) {
+    console.log(error.message)
+}
 })
 
 router.get('/edit/:id', async (req, res) => {
@@ -37,7 +41,7 @@ function saveArticleAndRedirect(path) {
     let article = req.article
     article.title = req.body.title
     article.description = req.body.description
-    article.Markdown = req.body.Markdown
+    article.markdown = req.body.markdown
     try {
       article = await article.save()
       res.redirect(`/articles/${article.slug}`)

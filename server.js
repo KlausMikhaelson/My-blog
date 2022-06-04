@@ -1,6 +1,6 @@
 const express = require("express");
 const mongoose = require("mongoose");
-const article = require("./models/article.js");
+const Article = require("./models/article.js");
 const articleRouter = require('./routes/articles.js')
 const app = express();
 app.set('view engine', 'ejs')
@@ -13,7 +13,7 @@ mongoose.connect('mongodb://127.0.0.1/urlShortener', {
 app.use(express.urlencoded({extended: false}))
 
 app.get('/', async (req, res) => {
-    const articles = await article.find().sort({
+    const articles = await Article.find().sort({
         createdAt: 'desc'
     })
     res.render("articles/index", {articles: articles}) 
