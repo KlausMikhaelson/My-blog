@@ -5,16 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Add new Title</title>
-    <link href="/public/assets/style.css" rel="stylesheet" type="text/css">
+    <title>Document</title>
 </head>
+<link href="/public/assets/style.css" rel="stylesheet" type="text/css">
 
 <body>
-    <div class="upper-part">
-        <h1>New Article</h1>
+    <div class="show-title">
+        <h2>
+            <%= article.title %>
+        </h2>
     </div>
-    <div>
+    <div class="show-description">
         <%= article.createdAt.toLocaleDateString() %>
+    </div>
+    <div class="show-markdown">
+        <%= article.markdown %>
     </div>
 </body>
 

@@ -103,3 +103,23 @@ label {
     margin-top: 2%;
     margin-left: 10%;
 }
+
+.show-title {
+    margin-top: 50px;
+    margin-left: 50px;
+    margin-bottom: 10px;
+    color: darkcyan;
+    font-size: 2rem;
+}
+
+.show-description {
+    margin-left: 55px;
+    opacity: 0.7;
+    margin-bottom: 10px;
+}
+
+.show-markdown {
+    margin-left: 50px;
+    margin-bottom: 20px;
+    font-size: 1.4rem;
+}
